@@ -6,13 +6,13 @@
 //Give specific height and width to the car image
 greencar_width=100;
 
-greencar_height=90;
+greencar_height=150;
 
-greencar_x=20;
+greencar_x=15;
 
-greencar_y=20;
+greencar_y=340;
 
-greencar_img="rover.png";
+greencar_img="car2.png";
 
 background_image = "parkingLot.jpg";
 
@@ -33,12 +33,12 @@ function add() {
 
 function uploadBackground() {
 	//Define function ‘uploadBackground’
-    ctx.drawImage(background_image,0,0,canvas.width,canvas.height);
+    ctx.drawImage(car_lot_bg_img,0,0,canvas.width,canvas.height);
 }
 
 function uploadgreencar() {
 	//Define function ‘uploadgreencar’.
-	ctx.drawImage(greencar_bg_img,greencar_x,greencar_y,greencar_width,greencar_height);
+	ctx.drawImage(car_bg_img,greencar_x,greencar_y,greencar_width,greencar_height);
 }
 
 
@@ -78,7 +78,7 @@ function my_keydown(e)
 function up()
 {
 	//Define function to move the car upward
-	if (greencar_y>= 0){
+	if (greencar_y>= 90){
 		greencar_y = greencar_y - 5 ;
 		console.log("greencarx= ",greencar_x, "greencary=",greencar_y);
 		uploadBackground () ;
@@ -89,7 +89,7 @@ function up()
 function down()
 {
 	//Define function to move the car downward
-	if (greencar_y<= 500){
+	if (greencar_y<= 345){
 		greencar_y = greencar_y + 5 ;
 		console.log("greencarx= ",greencar_x, " greencary=",greencar_y);
 		uploadBackground () ;
@@ -111,7 +111,7 @@ function left()
 function right()
 {
 	//Define function to move the car right side
-	if (greencar_x<= 700){
+	if (greencar_x<= 890){
 		greencar_x = greencar_x + 5 ;
 		console.log("greencar= ",greencar_x, " greencar=",greencar_y);
 		uploadBackground () ;
